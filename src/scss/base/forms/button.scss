@@ -1,0 +1,28 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: rem(14) rem(67);
+	background-color: $button;
+	font-family: GeorgeRoundedRegular;
+	font-size: rem(20);
+	border-radius: rem(5);
+	line-height: math.div(25, 20);
+	color: #fff;
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+
+	&_m {
+		padding: rem(13) rem(25);
+		font-family: Josefin Sans;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: math.div(16, 16);
+	}
+}
