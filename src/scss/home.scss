@@ -1,3 +1,385 @@
 //====================================================================================================
 
+.mainscreen {
+	&:not(:last-child) {margin-bottom: rem(148.5);}
+	@include adaptiveValue("padding-top", 129, 210);
+	@include adaptiveValue("padding-bottom", 48.5, 177);
+
+		&__container {
+		}
+
+		&__body {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__leftside {
+			display: flex;
+			flex-direction: column;
+			@include adaptiveValue("padding-top", 106, 0);
+
+			@media (max-width:$tablet){
+				width: 100%;
+				text-align: center;
+				align-items: center;
+			}
+		}
+
+		&__subtitle {
+			font-family: Cedarville Cursive;
+			font-size: rem(28);
+			line-height: math.div(53, 28);
+			color: $mainColor;
+			&:not(:last-child) {margin-bottom: rem(26);}
+
+			@media (max-width:$tablet){
+				font-size: rem(19);
+				line-height: math.div(36, 19);
+				color: $secondColor;
+				&:not(:last-child) {margin-bottom: rem(12);}
+			}
+		}
+
+		&__title {
+			font-family: Josefin Sans;
+			@include adaptiveValue("font-size", 63, 54);
+			font-weight: 700;
+			color: $secondColor;
+			&:not(:last-child) {margin-bottom: rem(26);}
+
+			@media (max-width:$tablet){
+				&:not(:last-child) {margin-bottom: rem(30);}
+				font-size: rem(54);
+			}
+		}
+
+		&__button {
+			&::before{
+				display: none;
+
+				@media (max-width:$tablet){
+					display: block;
+					font-size: rem(7);
+				}
+			}
+
+			@media (max-width:$tablet){
+				width: rem(189);
+			font-size: rem(16);
+			line-height: math.div(16, 16);
+			flex-direction: row-reverse;
+			padding: rem(15) rem(25) rem(15) rem(18);
+			justify-content: space-between;
+			align-items: center;
+			}
+			
+		}
+
+		&__rightside {
+			display: flex;
+			align-items: flex-end;
+
+			@media (max-width:$tablet){
+				display: none;
+			}
+		}
+
+		&__arrow {
+			display: flex;
+			background-color: #F4F7F5;
+			width: rem(159);
+			height: rem(157);
+			justify-content: center;
+			align-items: center;
+			
+			&::before{
+				font-size: rem(8);
+			}
+		}
+
+		&__image {
+			position: relative;
+			display: block;
+			width: rem(410);
+			height: rem(469);
+			margin-right: rem(44);
+			background-color: #E3EBE7;
+
+			img {
+				position: absolute;
+				bottom: -10%;
+				left: 50%;
+				margin-left: -174px;
+			}
+		}
+
+		&__social {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+}
+.social {
+
+		&__icons {
+			display: flex;
+			flex-direction: column;
+			&:not(:last-child) {margin-bottom: rem(2);}
+		}
+
+		&__icon {
+		}
+
+		&__text {
+			writing-mode: tb-rl;
+   			transform:rotate(180deg);
+			font-weight: 700;
+			font-size: rem(28);
+		}
+}
+
 //====================================================================================================
+
+.about {
+	&:not(:last-child) {margin-bottom: rem(163);}
+
+	@media (max-width:$tablet){
+		&:not(:last-child) {margin-bottom: rem(96);}
+	}
+
+		&__container {
+		}
+
+		&__body {
+			display: flex;
+			position: relative;
+
+			@media (max-width:$tablet){
+				position: static;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		&__info {
+			left: 0;
+		}
+
+		&__image {
+			position: relative;
+			display: block;
+			background-color: #FAE9E0;
+			width: rem(975);
+			height: rem(287);
+
+			img {
+				position: absolute;
+				bottom: -20%;
+				right: -4%;
+
+				@media (max-width:$tablet){
+					top: -10%;
+					right: -50%;
+					margin-right: 195px;
+				}
+			}
+
+			@media (max-width:$tablet){
+				width: rem(380);
+				height: rem(248);
+				&:not(:last-child) {margin-bottom: rem(30);}
+			}
+		}
+
+		&__content {
+			margin: 0 rem(72) 0 rem(103);
+
+			@media (max-width:$tablet){
+				margin: 0;
+			}
+		}
+
+		&__title {
+		}
+
+		&__text {
+			p {
+				&:not(:last-child) {margin-bottom: rem(15);}
+
+				@media (max-width:$tablet){
+					&:not(:last-child) {margin-bottom: rem(30);}
+				}
+			}
+		}
+}
+
+//=========================================================================================================================
+
+.promotion {
+	margin-bottom: rem(122);
+
+	@media (max-width:$tablet){
+		margin-bottom: rem(96);
+	}
+
+		&__container {
+		}
+
+		&__body {
+			display: flex;
+			position: relative;
+
+			@media (max-width:$tablet){
+				flex-direction: column;
+				position: static;
+				align-items: center;
+				gap: rem(30);
+			}
+		}
+
+		&__content {
+			padding: 0 rem(103) 0 0;
+
+			@media (max-width:$tablet){
+				order: 2;
+				padding: 0;
+			}
+		}
+
+		&__title {
+		}
+
+		&__text {
+			&:not(:last-child) {margin-bottom: rem(24);}
+		}
+
+		&__button {
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
+
+		&__image {
+			margin-right: rem(72);
+			position: relative;
+			width: rem(1660);
+			height: rem(276);
+			background-color: #E3EBE7;
+
+			@media (max-width:$tablet){
+				order: 1;
+				width: rem(410);
+				margin: 0;
+			}
+
+			img {
+				position: absolute;
+				top: -11%;
+				left: 50%;
+				margin-left: -120px;
+			}
+		}
+
+		&__info {
+			right: 0;
+		}
+}
+
+//=========================================================================================================================
+
+.shop {
+	margin-bottom: rem(125);
+
+	@media (max-width:$tablet){
+		margin-bottom: rem(96);
+	}
+
+		&__container {
+			position: relative;
+		}
+
+		&__body {
+			padding: 0 rem(42);
+
+			@media (max-width:$tablet){
+				display: none;
+			}
+		}
+
+		&__slider {
+			padding: rem(15) rem(15) rem(50);
+		}
+
+		&__wrapper {
+			display: flex;
+		}
+
+		&__slide {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			flex: 1 1 31.5%;
+			height: 100%;
+			box-shadow: 0px 23px 34px rgba(35, 57, 55, 0.17);
+			border-radius: 25px;
+			padding: rem(45) rem(50) rem(90);
+		}
+
+		&__name {
+			font-family: Josefin Sans;
+			font-weight: 700;
+			font-size: rem(28);
+			line-height: math.div(28, 28);
+			&:not(:last-child) {margin-bottom: rem(25);}
+		}
+
+		&__text {
+			&:not(:last-child) {margin-bottom: rem(42);}
+		}
+
+		&__button {
+			margin-bottom: 47px;
+			position: absolute;
+			bottom: 0;
+
+			@media (max-width:$tablet){
+				margin-bottom: 47px;
+				left: 50%;
+				margin-left: -117.5px;
+
+			}
+		}
+
+		&__mobile {
+			display: none;
+
+			@media (max-width:$tablet){
+				display: block;
+			}
+		}
+
+		&__cards {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: rem(30);
+		}
+
+		&__card {
+			position: relative;
+			flex: 1 1 auto;
+			box-shadow: 0px 23px 34px rgba(35, 57, 55, 0.17);
+			border-radius: 25px;
+			padding: rem(44) rem(44.5) rem(88);
+			text-align: center;
+		}
+
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}

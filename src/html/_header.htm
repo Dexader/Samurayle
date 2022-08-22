@@ -1,19 +1,23 @@
-<header class="header">
+<header data-scroll="710" data-scroll-show class="header">
 	<div class="header__container">
 		<div class="header__body">
-			<div class="header__logo _icon-brunch"><span>Samwayle</span></div>
-			<div class="header__menu menu">
+			<div data-da=".header__body, 767.98, 2" class="header__logo _icon-brunch"><span>Samwayle</span></div>
+			<nav data-da=".menu__body, 767.98" class="header__menu">
+				<ul class="header__list">
+					<li class="header__item"><a href="#" class="header__link _icon-brunch"><span>Samwayle</span></a></li>
+					<li class="header__item"><a data-goto="#about" href="#" class="header__link">About us</a></li>
+					<li class="header__item"><a data-goto="#promotion" href="#" class="header__link">Promotion</a></li>
+					<li class="header__item"><a data-goto="#shop" href="#" class="header__link">Shop</a></li>
+					<li class="header__item"><a data-goto="#contacts" href="#" class="header__link">Contacts</a></li>
+				</ul>
+				<button type="button" class="header__button button button_m">Contact Us</button>
+			</nav>
+
+			<nav hidden class="menu">
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="" class="menu__link">About us</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Promotion</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Shop</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Contacts</a></li>
-					</ul>
-					<button type="button" class="header__button button button_m">Contact Us</button>
-				</nav>
-			</div>
+				<div class="menu__body">
+				</div>
+			</nav>
 		</div>
 	</div>
 </header>

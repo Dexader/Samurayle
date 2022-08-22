@@ -33,3 +33,21 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+.shop-button-prev,
+.shop-button-next {
+	position: absolute;
+	top: 50%;
+	&::before{
+		font-size: 40px;
+	}
+}
+
+.shop-button-prev {
+	left: 0;
+	
+}
+
+.shop-button-next {
+	right: 0;
+}

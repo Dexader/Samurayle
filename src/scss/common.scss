@@ -1,1 +1,32 @@
-// Заголовки, общие БЄМ блоки и проче...
+.title {
+	font-family: Josefin Sans;
+	font-weight: 700;
+	font-size: rem(38);
+	color: $secondColor;
+	&:not(:last-child) {margin-bottom: em(25, 38);}
+
+	@media (max-width:$tablet){
+		&:not(:last-child) {margin-bottom: rem(30);}
+	}
+}
+
+.text {
+	letter-spacing: 0.001em;
+	line-height: math.div(38, 19);
+}
+
+.info {
+	position: absolute;
+	top: -9%;
+	writing-mode: tb-rl;
+   	transform:rotate(180deg);
+	font-family: Cedarville Cursive;
+	font-size: rem(28);
+	color: $secondColor;
+	opacity: .75;
+	z-index: 100;
+
+	@media (max-width:$tablet){
+		display: none;
+	}
+}

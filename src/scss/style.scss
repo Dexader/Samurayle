@@ -140,3 +140,18 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+
+.page {
+
+		&__mainscreen {
+		}
+
+		&__about {
+		}
+
+		&__promotion {
+		}
+
+		&__shop {
+		}
+}
